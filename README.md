@@ -35,3 +35,18 @@ This project demonstrates the implementation of a responsive navigation bar usin
    ```bash
    npm start
    ```
+
+## Menu on Left
+
+1. Replacement below code in `reactjs-responsive-navbar-flexbox-html-css\src\common\nav.jsx` in div: nav-logo.
+
+```bash
+        <a className="nav-bars" href="#navbar" aria-label="Open main menu">
+            <i><CgMenuGridO /></i>
+        </a>
+        <a className='logo-image'>
+            <img src={brandlogo} />
+        </a>
+```
+
+2. Apply changes in css by replacig the style `right:0` with `left:0` in nav element `reactjs-responsive-navbar-flexbox-html-css\src\assets\css\style.css`
