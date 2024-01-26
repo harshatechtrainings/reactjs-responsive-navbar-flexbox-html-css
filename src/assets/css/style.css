@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-font: 'Libre Baskerville', serif;
+    --primary-font-text: 'Jost', sans-serif;
+    --primary-color-blue: rgb(22 4 86);
+    --primary-color-white: white;
+    --primary-font-outfit: 'Outfit', sans-serif;
+    --primary-input-field-background: #DFE4E8;
+}
+
+
+body{
+    margin:0;
+    padding: 0;
+}
+
+
+.nav-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    padding: 1rem;
+    align-items: center;
+}
+
+.logo-image{
+    display: block;
+    padding: 1rem;
+}
+
+.logo-image img{
+    width: 150px;
+    vertical-align: top;
+}
+
+.nav-bars, .close{
+    font-size: 30px;
+}
+
+nav{
+    width: 30%;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-between;
+    top:0;
+    right: 0;
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+    border: 1px solid grey;
+    background-color: white;
+    padding: 2rem;
+}
+
+nav:target{
+    transform: translateY(0);
+    display: flex;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul ul{
+    padding: 0.5rem 1rem;
+}
+
+
+nav a{
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-family: var(--primary-font-text);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav a:hover{
+    color: orange;
+}
+
+nav a:focus{
+    color: rgb(61, 149, 204);
+}
+
+
+.dropdown :hover+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu {
+    position: relative;
+    display: none;
+}
+
+.dropdown-menu:hover {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown i{
+    font-size: 20px;
+    vertical-align: sub;
+}
+
+@media (min-width: 750px) {
+
+    .close,.nav-bars{
+        display: none;
+    }    
+
+    header{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: static;
+        background-color: transparent;
+        padding: 2rem;
+        transform: translateY(0);
+        border: none;
+        overflow: visible;
+    }
+
+    nav ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+
+    nav ul ul{
+        display: flex;
+        flex-flow: row;
+        padding: 0;
+    }
+.logo-image {
+    padding: 0;
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+}
+
+/* //Adding image styles */
+
+header{
+    width: 100%;
+    position: absolute;
+}
+
+div img{
+    width: 100%;
+}
